@@ -1,7 +1,7 @@
 name: Build Tweak
 
 on:
-  push:
+push:
     branches: [ main 
 workfworkflow_dispatch:
 jobs:
@@ -26,8 +26,4 @@ jobs:
         export THEOS=~/theos
         make package THEOS_PACKAGE_SCHEME=rootless
 
-    - name: Upload Finished Deb Package
-      uses: actions/upload-artifact@v4
-      with:
-        name: ScreenFlash-Rootless-Deb
-        path: packages/*.deb
+    
